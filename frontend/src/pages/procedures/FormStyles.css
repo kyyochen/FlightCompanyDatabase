@@ -1,0 +1,168 @@
+/* src/pages/FormStyles.css */
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0056b3;
+}
+
+.home-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #0056b3;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.add-airplane-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-airplane-form .error-message,
+.add-airplane-form .success-message,
+.add-airplane-form .submit-button {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.form-group-checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+    width: auto;
+    margin-top: 0;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.submit-button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 0.95em;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #444;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .home-main {
+        grid-template-columns: 1fr;
+    }
+    .add-airplane-form {
+        grid-template-columns: 1fr;
+    }
+    .add-airplane-form .error-message,
+    .add-airplane-form .success-message,
+    .add-airplane-form .submit-button {
+        grid-column: auto;
+    }
+}
